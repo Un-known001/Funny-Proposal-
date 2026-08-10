@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffe6e8; /* Soft romantic pink background */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: hidden; /* Stops scrollbars */
+}
+
+/* Floating Hearts Animation */
+#hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* User can click through it */
+  z-index: -1; /* Keeps hearts behind the main content */
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  color: #ff7480;
+  font-size: 20px;
+  animation: float 4s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-120vh) rotate(360deg);
+  }
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#gif {
+  max-width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8em;
+  color: #e94d58;
+  margin-bottom: 20px;
+}
+
+#btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 60px;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 2px solid #e94d58;
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth transition for growing */
+}
+
+#yes-btn {
+  background: #e94d58;
+  color: white;
+}
+
+#no-btn {
+  background: white;
+  color: #e94d58;
+  position: relative; /* Starts relative, becomes fixed via JS */
+}
+
+/* Add this to the bottom of your style.css */
+
+/* The shaking animation for when the button is tired */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shaking {
+  animation: shake 0.4s infinite;
+  background-color: #ffcccc !important; /* Turns slightly red/stressed */
+  color: white !important;
+  border-color: #ffcccc !important;
+}
+
+/* The falling animation for the final meltdown */
+@keyframes fallOff {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(45deg); opacity: 0; }
+}
+
+.falling {
+  animation: fallOff 1s forwards !important;
+  pointer-events: none; /* Stops it from being clicked while falling */
+}
