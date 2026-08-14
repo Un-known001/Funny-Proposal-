@@ -1,11 +1,12 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/88341460/189536974-e0965a1d-3cc8-4507-a4c8-77aaa778a5c1.gif"></p>
 
+
  
 
 <h1 align="center">
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="1000">
  
- <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Welcome;+I'm+Roshan+Sharma+|^_^|;+I'm+Hacker+|×_×|;+I'm+Software+Developer+|•_•|" />
+ <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Welcome;+I'm+Roshan+Sharma+|^_^|;+I'm+Hacker+|×_×|;+I'm+Software+Developer+|•_•|;+I'm+Animator;+I'm+Artist's;+I'm+UX/UI+Designer;+I'm+Editor" />
 </h1>
 <div align="center">
 
@@ -47,3 +48,5 @@
   </a>
  
 </div>
+
+ <hr/>
